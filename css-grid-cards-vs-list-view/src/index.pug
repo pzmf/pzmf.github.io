@@ -1,0 +1,128 @@
+input#bluepurple.variation(type="radio" value="1" name="color" checked)
+label(for="bluepurple")
+
+input#sunset.variation(type="radio" value="2" name="color")
+label(for="sunset")
+
+input#godiva.variation(type="radio" value="3" name="color")
+label(for="godiva")
+
+input#dark.variation(type="radio" value="4" name="color")
+label(for="dark")
+
+input#pinkaru.variation(type="radio" value="5" name="color")
+label(for="pinkaru")
+
+main
+	section.results-header
+		h1 Find dogs near you.
+		.results-header__option
+			.option__button.option--grid.selected
+				span
+				span
+				span
+				span
+				span Grid
+			.option__button.option--list
+				span
+				span
+				span
+				span List
+	div.filter-section__wrapper
+		section.filter-section
+			h6 Filters
+			.filters
+				h5.filters__title Dog Type
+				.filters__item
+					.checkbox
+						input#checkbox-1(type="checkbox")
+						label(for="checkbox-1") Puppy
+							span.box
+							.tooltip.top(data-tooltip="Younger than 18 months.")
+								span
+									i.icon-info
+					span.badge.status-primary 10
+				.filters__item
+					.checkbox
+						input#checkbox-2(type="checkbox" checked)
+						label(for="checkbox-2") Young
+							span.box
+					span.badge.status-primary 5
+				.filters__item
+					.checkbox
+						input#checkbox-3(type="checkbox")
+						label(for="checkbox-3") Adult
+							span.box
+					span.badge.status-primary 20
+				.filters__item
+					.checkbox
+						input#checkbox-4(type="checkbox")
+						label(for="checkbox-4") Senior
+							span.box
+					span.badge.status-primary 8
+			.filters
+				h5.filters__title Dog Size
+				.filters__item
+					.checkbox
+						input#checkbox-5(type="checkbox")
+						label(for="checkbox-5") Small
+							span.box
+					span.badge.status-primary 9
+				.filters__item
+					.checkbox
+						input#checkbox-6(type="checkbox" checked)
+						label(for="checkbox-6") Medium
+							span.box
+					span.badge.status-primary 12
+				.filters__item
+					.checkbox
+						input#checkbox-7(type="checkbox")
+						label(for="checkbox-7") Large
+							span.box
+					span.badge.status-primary 17
+				.filters__item
+					.checkbox
+						input#checkbox-8(type="checkbox")
+						label(for="checkbox-8") XL
+							span.box
+					span.badge.status-primary 3
+			
+	section.results-section.results--grid
+		- for (var i=0; i<9; i++)
+			.profile
+				.profile__image
+					img(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo")
+				.profile__info
+					h3 Doggo Dogg
+					p.profile__info__extra A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.
+				.profile__stats
+					p.profile__stats__title Type
+					h5.profile__stats__info Puppy
+				.profile__stats
+					p.profile__stats__title Size
+					h5 Medium
+				.profile__stats
+					p.profile__stats__title Weight
+					h5.profile__stats__info 45 lbs
+				.profile__cta
+					a.button Adopt Doggo!
+	
+footer
+	.explanation
+		| Part of the  
+		a(href="https://codepen.io/collection/DQvYpQ" target="_blank") CSS Grid collection here
+		| .  
+		a(href="https://codepen.io/oliviale/full/mgWjpq" target="_blank") Part I
+		|  •  
+		a(href="https://codepen.io/oliviale/full/WqwOzv" target="_blank") Part II
+		|  • 
+		a(href="https://codepen.io/oliviale/full/GbmyYx" target="_blank") Part III
+	.social
+		a(href="https://twitter.com/meowlivia_" target="_blank")
+			i.icon-social-twitter.icons
+		a(href="https://github.com/oliviale" target="_blank")
+			i.icon-social-github.icons
+		a(href="https://dribbble.com/oliviale" target="_blank")
+			i.icon-social-dribbble.icons
+			
+	
