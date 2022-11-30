@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/44/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:32 GMT -->
+<head>
+    <meta charset="utf-8">
+
+    <title>"Is This Progress?" by Graeme Rutherford, 2014</title>
+    <!-- Javascript by Jamie White jamie-white.com -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+		    padding: 0;
+		    margin: 0;
+		    height:100%;
+		    overflow: hidden;
+		}
+
+		body {
+
+		}
+
+		.wrapper {
+		    width: 100%;
+		    height: 100%;
+		    background-color: #000000;
+		}
+
+		.circle {
+		    position:absolute;
+		    left:50%;
+		    top:50%;
+		    width:10px;
+		    height:10px;
+		    margin-top:-5px;
+		    margin-left:-5px;
+		    background-color: #000;
+		    border-radius: 10px;
+		    -webkit-border-radius: 10px;
+		    -moz-border-radius: 10px;
+		}
+    </style>
+</head>
+
+<!--
+
+GGGGGGGGGGGG
+GGGGGGGGGGGG
+GGG
+GGG
+GGG   GGGGGG
+GGG   GGGGGG
+GGG      GGG
+GGG      GGG
+GGGGGGGGGGGG GGG
+GGGGGGGGGGGG GGG
+
+-->
+
+<body>
+    <div class="wrapper">
+    </div>
+	<script src="../../../../../code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
+    <script type="text/javascript">
+
+		$(function(){
+			(function(){
+
+				var r;
+				var g;
+				var b;
+				var wrapper = $(".wrapper");
+				var circle = "<div class='circle'></div>";
+
+				this.randomColor = function(){
+					return Math.ceil(Math.random()*255);
+				}
+
+				this.init = function() {
+					this.drawNext();
+				};
+
+				this.drawNext = function() {
+					r = this.randomColor();
+					g = this.randomColor();
+					b = this.randomColor();
+
+					var next = $(circle);
+					next.css("background-color", "rgb("+r+","+g+","+b+")");
+
+					wrapper.append(next);
+
+					var largest = Math.max(window.innerWidth, window.innerHeight);
+					var scale = largest/next.width()*1.56;
+
+					TweenMax.to(next, 2, {immediateRender:true, scaleX:scale, scaleY:scale, ease:Linear.easeNone, onComplete:function(){
+
+						$(".wrapper").css("background-color", "rgb("+r+","+g+","+b+")");
+
+						next.remove();
+
+						this.drawNext();
+
+					}.bind(this)});
+				};
+
+
+				this.init();
+			}());
+		})
+
+    </script>
+
+
+</body>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/44/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:33 GMT -->
+</html>

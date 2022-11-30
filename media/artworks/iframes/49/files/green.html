@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/49/files/green.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:53 GMT -->
+<head>
+		<title>Mark Dorf - Green Pixel</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #fff;
+				//background-image: url('textures/bg.png');
+				background-size: cover;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			.overlay{
+				position:fixed;
+				width:100%;
+				height:100%;
+				top:0px;
+				left:0px;
+				background-color:rgba(0,0,0,1);
+				z-index:5;
+				-webkit-transition:opacity .5s ease-out;-moz-transition:opacity .5s ease-out;-o-transition:opacity .5s ease-out;
+			}
+
+			.center{
+				position:absolute;
+				height:100px;
+				width:600px;
+				top:50%;
+				left:50%;
+				//text-align:center;
+				//margin-left:-300px;
+				font-family: Verdana, Geneva, sans-serif;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="overlay" id="overlay">
+    		<div class="center">
+        		<div id="loading">LOADING<span id="dots"></span></div>
+    		</div>
+		</div>
+
+		<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/three.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+		<script src="js/stats.min.js"></script>
+		
+		
+
+		<script>
+
+			var dots = 0;
+			$(document).ready(function(){
+				setInterval(type, 300);
+			});
+
+			function type(){
+				if(dots <3){
+					$('#dots').append('.');
+					dots++;
+				}
+				else{
+					$('#dots').html('');
+					dots = 0;
+				}
+			}
+
+			if ( ! Detector.webgl ){
+				$(".overlay").hide();
+				Detector.addGetWebGLMessage();
+			} 
+
+			var container;
+			var tex, texMat, particleMaterial;
+			var camera, scene, renderer, bgCube, original, originalMesh, originalGeom, partVerts, parts;
+			var intersects  = [];
+			var vertices_tmp = [];
+			var mouseX = 0, mouseY = 0;
+			var partGeom, vl;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			var time1;
+			var sceneLoaded = false;
+			var hit = false;
+			var clock = new THREE.Clock();
+			var dispX = [], dispY = [], dispZ = [];
+			
+			init();
+			animate();
+
+			function init() {
+				renderer = new THREE.WebGLRenderer( /*{ preserveDrawingBuffer: true } */);
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				//renderer.autoClearColor = false;
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				container.appendChild( renderer.domElement );
+				
+				var loadScene = createLoadScene();
+
+				camera = loadScene.camera;
+				camera.position.x = 0.0;
+				camera.position.y = 0.0;
+				camera.position.z = 0.45000;
+
+				scene = loadScene.scene;
+				
+				var loader = new THREE.SceneLoader();
+				loader.load( 'models/bust_2hp.js', callbackFinished );
+
+				tex = new THREE.ImageUtils.loadTexture('textures/greenBg.jpg');
+				texMat = new THREE.MeshBasicMaterial({map:tex, side:THREE.DoubleSide });
+
+				projector = new THREE.Projector();
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+
+			function createLoadScene() {
+				var result = {
+					scene:  new THREE.Scene(),
+					camera: new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 1, 100 )
+				};
+				return result;
+			}
+
+			function callbackFinished (result) {
+				initScene(result);
+				initObjects(result);
+				sceneLoaded = true;
+			if(sceneLoaded){
+				$(".overlay").hide();
+				}
+			}
+
+			function initScene(result){
+				camera.near = 0.01;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				scene = result.scene;
+
+				bgCube = new THREE.Mesh(new THREE.CubeGeometry(170,70,100,1,1,1 ), texMat );
+				bgCube.position.z = 0.0;
+				scene.add(bgCube);
+			}
+
+			function initObjects(result){
+				var blueMat = new THREE.MeshLambertMaterial({ color: 0xCBE5E3, depthTest:true, shading:THREE.FlatShading, side:THREE.DoubleSide });
+
+				original = result.scene.getObjectByName( 'original', true).geometry;
+				scene.__removeObject(result.scene.getObjectByName( 'original', true));		
+
+				originalMesh = new THREE.Mesh(original,blueMat);
+				originalGeom = originalMesh.geometry;
+
+				partVerts = originalGeom.vertices;
+				vl = partVerts.length;
+				var i;
+
+				for(i = 0; i<vl; i++){
+					p = partVerts[ i ];
+
+					dispX[i] =0.5 - Math.random();
+					dispY[i] =0.5 - Math.random();
+					dispZ[i] =0.5 - Math.random();
+				
+					vertices_tmp[ i ] = [ p.x,p.y,p.z,0,0 ] ;
+				}
+
+				
+
+				parts = new THREE.ParticleSystem(originalGeom, new THREE.ParticleSystemMaterial( { color: 0x00c04d, size: 0.0035,  map: THREE.ImageUtils.loadTexture('textures/particle.png'), transparent:true, blending:THREE.AdditiveBlending, fog:0x000000} ));
+				
+				parts.castShadow = true;
+				parts.receiveShadow = true;
+				
+				scene.add(parts);
+			}
+
+
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
+			function onDocumentMouseMove( event ) {
+				mouseX = ( event.clientX - windowHalfX ) / 2;
+				mouseY = ( event.clientY - windowHalfY ) / 2;
+			}
+
+			function onDocumentMouseDown( event ) {
+
+				event.preventDefault();
+
+				var vector = new THREE.Vector3( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1, 0.5 );
+				projector.unprojectVector( vector, camera );
+
+				var raycaster = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+
+				if(sceneLoaded){
+				intersects = raycaster.intersectObject( parts );
+				}
+				if ( intersects.length > 0 ) {
+					hit = !hit;
+				}
+			}
+
+			function onDocumentMouseUp (event){
+					hit = !hit
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				
+				targetX = mouseX * .02;
+				targetY = mouseY * .02;
+
+				if (sceneLoaded && parts ) {
+					parts.rotation.y += 0.005 * ( targetX - parts.rotation.y );
+					parts.rotation.x += 0.005 * ( targetY - parts.rotation.x );
+				}
+				
+				render();
+			}
+
+			function render() {
+				var delta = 10 * clock.getDelta();
+
+				if(sceneLoaded){
+					var pGeom = parts.geometry;
+					var pVerts = pGeom.vertices;
+
+					for(var i = 0; i<pVerts.length; i++){
+						p = pVerts[ i ];
+						
+						vt = vertices_tmp[i];
+
+						if(hit){
+							p.x += 5.0 * ((dispX[i] )*0.025) * delta * 0.04;
+							p.y += 5.0 * ((dispY[i] )*0.025) * delta * 0.04;
+							p.z += 5.0 * ((dispZ[i] )*0.025) * delta * 0.04;					
+						}
+						else if(!hit ){
+							d = Math.abs( p.x - vt[ 0 ] ) + Math.abs( p.y - vt[ 1 ] ) + Math.abs( p.z - vt[ 2 ] );
+							
+							if ( d > 0 ) {
+								p.x -= 0.025* ( p.x - vt[ 0 ] )  ;
+								p.y -= 0.025* ( p.y - vt[ 1 ] )   ;
+								p.z -= 0.025* ( p.z - vt[ 2 ] )   ;
+							} 
+						}
+					}
+					parts.geometry.verticesNeedUpdate = true;
+				}
+
+				renderer.render( scene, camera );
+			}
+
+
+		</script>
+
+	</body>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/49/files/green.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:11:09 GMT -->
+</html>

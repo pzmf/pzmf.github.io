@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/11/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:19 GMT -->
+<head>
+	<meta charset="utf-8" />
+   <title>EMILIO GOMARIZ · 2013</title>    
+   <link rel="stylesheet" href="jquery-1.10.3.css" />
+   <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<!-- V.mmP.02 for Neverland Space .com -->
+
+<body>
+ 
+<div id="screenbg">
+
+<script src="jquery-1.9.1.js"></script>
+    
+<div id="screen"></div> 
+
+<div id="performance"></div>
+ 
+<div id="panel">
+
+     <a href="#" class="button" title="hide"> </a>
+     <div id="hide">
+     <div id="hand"></div> 
+ 
+    <div id="refresh" title="reset"></div>
+     
+    <div style="width:60px;height:17px;"></div>
+
+    <div id="radar">
+    <div id="target-BLK"></div>
+    <div id="target"></div>
+    <div id="target-2"></div>
+    <div id="target-3"></div>
+    <div id="target-4"></div>
+    <div id="target-5"></div>
+    <div id="target-6"></div>
+    <div id="target-7"></div>
+    <div id="target-8"></div>
+    <div id="target-9"></div>
+    <div id="target-10"></div>
+    <div id="target-R"></div>
+    <div id="target-G"></div>
+    <div id="target-B"></div>
+    <div id="target-N"></div>
+              
+</div>
+</div>
+</div>
+
+<script>  
+
+$("#target-BLK").mousemove(function(event) {
+  $("#performance").append('<div class="blink2"></div>' + '<div class="transparent1"></div>' + '<div class="blink2"></div>' + '<div class="transparent1"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-2").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-2"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-3").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-3"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-4").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-4"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-5").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-5"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-6").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-6"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-7").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-7"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-8").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-8"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-9").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-9"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-10").mousemove(function(event) {
+  $("#performance").append('<div id="pixel1-10"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-R").mousemove(function(event) {
+  $("#performance").append('<div id="pixel-R"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-G").mousemove(function(event) {
+  $("#performance").append('<div id="pixel-G"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+
+$("#target-B").mousemove(function(event) {
+  $("#performance").append('<div id="pixel-B"></div>' + '<div class="blink"></div>');
+    $('#performance').height($("body").height());
+});
+2
+$("#target-N").mousemove(function(event) {
+  $("#performance").append('<div class="transparent"></div>' + '<div class="transparent"></div>');
+    $('#performance').height($("body").height());
+});
+
+</script>
+
+<script src="jquery-1.10.3.js"></script>
+
+<script>
+$(function() {
+    $( "#panel" ).draggable({ handle: "#hand" });
+    $( "div, #hand" ).disableSelection();
+  });
+</script>
+
+<script>
+$( "#panel" ).draggable({ containment: "body" });
+</script>
+
+<script>
+   $('.button').click(function() {
+   $(this).toggleClass('button-clicked');
+});
+   
+$('.button-clicked').click(function(e) {
+    $(this).removeClass('button-clicked');
+    });
+
+    function runEffect() { 
+      $( "#hide" ).toggle( );
+    };
+    $( ".button" ).click(function() {
+      runEffect(); 
+   }); 
+</script> 
+
+<script>
+ $(document).keyup(function(e) {
+       if ((e.keyCode || e.which) == 27) {
+   $('.button').toggleClass('button-clicked');
+           }
+    }); 
+
+    
+   $('.button-clicked').keyup(function(e) {
+       if ((e.keyCode || e.which) == 27) {
+    $(this).removeClass('button-clicked');
+           }
+    });
+
+
+    function runEffect() { 
+      $( "#hide" ).toggle( );
+    };
+    $(document).keyup(function(e) {
+        if ((e.keyCode || e.which) == 27) {
+      runEffect(); 
+        }
+    });
+</script>
+    
+<script>
+$('#refresh').click(function() {
+     location.reload('#canvas');
+});
+</script>
+    
+<script>
+    $('.button-clicked').click(function() {
+    $(this).removeClass('button-clicked');
+});
+</script>
+
+<script>
+function showHide(d)
+{
+var onediv = document.getElementById(d);
+var divs=['rainbow1','rainbow2','rainbow3','rainbow4','rainbow5','rgb1','rgb2','rgb3','rgb4','rgb5','bw1','bw2','bw3','bw4','bw5'];
+for (var i=0;i<divs.length;i++)
+  {
+  if (onediv != document.getElementById(divs[i]))
+    {
+    document.getElementById(divs[i]).style.display='none';
+    }
+  }
+onediv.style.display = 'block';
+}
+
+$(function stay() {
+    $('a').click(function stay() {            
+            $('a').removeClass('selected');
+            $(this).addClass('selected');                        
+    });
+});
+</script>
+
+
+</body>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/11/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:24 GMT -->
+</html>

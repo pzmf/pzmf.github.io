@@ -1,0 +1,743 @@
+@charset "UTF-8";
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+@import url("https://hello.myfonts.net/count/27c436");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: 'GT Sectra Bold';
+  src: url("../../fonts/GT-Sectra-Bold_.eot") format("eot"), url("../../fonts/GT-Sectra-Bold.woff") format("woff"), url("../../fonts/GT-Sectra-Bold.ttf") format("truetype"); }
+
+/* @license
+ * MyFonts Webfont Build ID 2606134, 2013-07-20T06:38:19-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfont(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Neuzeit S Book by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neuzeit-s/neuzeits-book/
+ * Copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted (c) 1990, 2003 Linotype Library GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype Library GmbH, and may no
+ *
+ * Webfont: Neuzeit S Book Heavy by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neuzeit-s/neuzeits-bookheavy/
+ * Copyright: Copyright (c) 1990, 2003 Linotype Library GmbH, www.linotype.com. All rights reserved. This software may not be reproduced, used, displayed, modified, disclosed or transferred without the express written approval of Linotype Library GmbH. Neuzeit is a tra
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2606134
+ *
+ * © 2013 MyFonts Inc
+*/
+@font-face {
+  font-family: 'NeuzeitSLT-Book';
+  src: url("../../fonts/27C436_0_0.eot");
+  src: url("../../fonts/27C436_0_0_.eot#iefix") format("embedded-opentype"), url("../../fonts/27C436_0_0.woff") format("woff"), url("../../fonts/27C436_0_0.ttf") format("truetype"), url("../../fonts/27C436_0_0.svg#wf") format("svg"); }
+
+@font-face {
+  font-family: 'NeuzeitSLT-BookHeavy';
+  src: url("../../fonts/27C436_1_0.eot");
+  src: url("../../fonts/27C436_1_0_.eot#iefix") format("embedded-opentype"), url("../../fonts/27C436_1_0.woff") format("woff"), url("../../fonts/27C436_1_0.ttf") format("truetype"), url("../../fonts/27C436_1_0.svg#wf") format("svg"); }
+
+.homewrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+.homewrap__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #000; }
+
+.homewrap__content {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 300px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+  .homewrap__content h1 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 7px;
+    font-family: 'GT Sectra Bold'; }
+  .homewrap__content .homewrap__artist {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-family: "NeuzeitSLT-BookHeavy", Helvetica, Arial, sans-serif;
+    margin-left: 40px; }
+    .homewrap__content .homewrap__artist__name {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-left: 4px; }
+  .homewrap__content p {
+    margin-top: 60px;
+    color: #fff;
+    width: 100%;
+    max-width: 750px;
+    font-size: 22px;
+    line-height: 1.4em; }
+  @media (max-width: 420px) {
+    .homewrap__content {
+      width: 100%;
+      padding: 40px 20px; }
+      .homewrap__content h1 {
+        font-size: 30px; }
+      .homewrap__content p {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 10px; } }
+
+.homewrap__enterbtn {
+  font-family: 'NeuzeitSLT-BookHeavy';
+  display: block;
+  width: 250px;
+  height: 45px;
+  line-height: 48px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+  margin-left: -100px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  pointer-events: none;
+  z-index: 1;
+  -webkit-animation: enterblink .9s infinite ease;
+          animation: enterblink .9s infinite ease;
+  transition: border-color .5s; }
+  .homewrap__enterbtn.is-visible {
+    border-color: #fff;
+    color: #fff;
+    pointer-events: auto;
+    -webkit-animation: none;
+            animation: none; }
+  .homewrap__enterbtn:hover {
+    background-color: #fff;
+    color: #222;
+    text-decoration: none; }
+  @media (max-width: 420px) {
+    .homewrap__enterbtn {
+      width: 90%;
+      margin-left: 0;
+      bottom: 5%;
+      right: 5%; } }
+
+@-webkit-keyframes enterblink {
+  0% {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0); }
+  50% {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); }
+  100% {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0); } }
+
+@keyframes enterblink {
+  0% {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0); }
+  50% {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); }
+  100% {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0); } }
+
+.home__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: #000;
+  background-position: center;
+  z-index: 0;
+  -webkit-transform: scale(1.1) skew(0, 0);
+          transform: scale(1.1) skew(0, 0);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  transition: 3s -webkit-transform, 1s opacity;
+  transition: 3s transform, 1s opacity;
+  opacity: 0; }
+  .home__background.is-visible {
+    -webkit-transform: scale(1) skew(0, 0);
+            transform: scale(1) skew(0, 0);
+    opacity: .3; }
+
+.loader {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  background-image: url("../../images/ns-n.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: loader-spin 1.5s infinite ease;
+          animation: loader-spin 1.5s infinite ease; }
+
+.nav-main {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 5;
+  color: #fff; }
+  @media (max-width: 420px) {
+    .nav-main {
+      top: 10px;
+      right: 20px; } }
+
+.nav-main-list {
+  list-style-type: none;
+  padding: 0; }
+  .nav-main-list li {
+    font-family: 'NeuzeitSLT-BookHeavy';
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em; }
+
+.nav-main-link {
+  padding: 5px 0;
+  position: relative;
+  color: inherit;
+  box-sizing: border-box; }
+  .nav-main-link:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    pointer-events: none;
+    transition: 0.2s width cubic-bezier(0.755, 0.05, 0.855, 0.06), 0.2s left cubic-bezier(0.755, 0.05, 0.855, 0.06); }
+  .nav-main-link:hover, .nav-main-link:focus, .nav-main-link.is-active {
+    border: none;
+    text-decoration: none; }
+    .nav-main-link:hover:after, .nav-main-link:focus:after, .nav-main-link.is-active:after {
+      left: 0;
+      width: 100%;
+      transition: 0.4s width cubic-bezier(0.23, 1, 0.32, 1), 0.4s left cubic-bezier(0.23, 1, 0.32, 1); }
+
+@-webkit-keyframes loader-spin {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  50% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: .4; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes loader-spin {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  50% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: .4; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+.mobile-alert {
+  display: none; }
+
+.ns-aw-container {
+  background-color: #fff;
+  position: relative;
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .ns-aw-container.is-highlighted {
+    cursor: pointer !important; }
+
+.ns-image {
+  vertical-align: bottom; }
+
+.ns-image__image {
+  display: none;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1; }
+
+.ns-image__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 0; }
+
+.ns-iframe__container {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
+
+.ns-iframe__iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.ns-iframe__overlay {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.ns-video .vid-container {
+  background-size: cover; }
+  .ns-video .vid-container video {
+    display: none; }
+
+.space-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.title-container {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none; }
+
+.title__instruction {
+  font-family: 'NeuzeitSLT-BookHeavy';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.title__description {
+  margin-top: 10px; }
+
+.title__name {
+  margin-left: 15px; }
+
+.title__num {
+  font-size: .8em; }
+
+.space__arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 80px;
+  height: 100%;
+  border-color: black; }
+  .space__arrow:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 1em;
+    height: 1em;
+    border: 4px solid black;
+    border-color: inherit;
+    border-left-width: 0;
+    border-bottom-width: 0; }
+  .space__arrow.prev:after {
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg); }
+  .space__arrow.next {
+    right: 0;
+    left: auto; }
+    .space__arrow.next:after {
+      right: 30px;
+      left: auto;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3; }
+  .nav:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.nav__logo {
+  display: block;
+  float: left;
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  overflow: hidden; }
+
+.nav__list {
+  display: block;
+  float: left; }
+  .nav__list.is-hidden .nav__item {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); }
+
+.nav__item {
+  display: inline;
+  line-height: 28px;
+  font-family: 'NeuzeitSLT-BookHeavy';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 15px;
+  transition: .4s opacity, .4s -webkit-transform;
+  transition: .4s opacity, .4s transform; }
+
+.nav__link {
+  color: inherit;
+  position: relative;
+  border: 0 solid transparent; }
+  .nav__link:hover {
+    border-bottom-width: 2px;
+    text-decoration: none; }
+
+#nav__logo__letter {
+  fill: #000; }
+
+.ns-scrub {
+  cursor: grab; }
+  .ns-scrub.is-grabbing {
+    cursor: grabbing; }
+
+.ns-scrub__image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto; }
+
+.ns-scrub__current {
+  visibility: visible;
+  width: 100%; }
+
+.ns-scrub__previous {
+  visibility: hidden;
+  width: 0; }
+
+.space__endslide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10; }
+
+.endslide__headline {
+  font-family: "GT Sectra Bold", Georgia, serif;
+  font-size: 50px;
+  position: absolute;
+  left: 60vw;
+  top: 10vh;
+  width: 25vw; }
+
+.endslide__logo {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  margin-right: 15px;
+  z-index: 3; }
+
+.playnav {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  border: 2px solid #000;
+  box-sizing: border-box; }
+  .playnav:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.playnav__btn {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 145px;
+  height: 41px;
+  line-height: 43px;
+  font-family: "NeuzeitSLT-BookHeavy", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-sizing: border-box; }
+  .playnav__btn:nth-child(1) {
+    border-right: 2px solid black; }
+  .playnav__btn:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff; }
+
+.exhibitions__item {
+  display: block;
+  font-family: "NeuzeitSLT-BookHeavy", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  width: 395px;
+  position: absolute; }
+  .exhibitions__item:hover {
+    text-decoration: none; }
+    .exhibitions__item:hover .exhibitions__image {
+      opacity: .8; }
+
+.exhibitions__image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  transition: .2s opacity; }
+
+.exhibitions__headline {
+  font-family: "GT Sectra Bold", Georgia, serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10%; }
+
+.exhibitions__artist {
+  margin-left: 20%; }
+
+.artist__name {
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+.exhibitions__item--0 {
+  left: 18vw;
+  top: 10vh;
+  width: 32vw; }
+  .exhibitions__item--0 .exhibitions__image {
+    height: 27vh; }
+
+.exhibitions__item--1 {
+  left: 55vw;
+  top: 30vh;
+  width: 35vw; }
+  .exhibitions__item--1 .exhibitions__image {
+    height: 25vh; }
+  .exhibitions__item--1 .exhibitions__headline {
+    font-size: 30px; }
+
+.exhibitions__item--2 {
+  left: 23vw;
+  top: 53vh;
+  width: 27vw; }
+  .exhibitions__item--2 .exhibitions__image {
+    height: 25vh; }
+  .exhibitions__item--2 .exhibitions__headline {
+    font-size: 30px; }
+
+.share {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 11px; }
+
+.share__link {
+  font-family: "NeuzeitSLT-BookHeavy", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 15px; }
+  .share__link:hover {
+    opacity: .6;
+    text-decoration: none; }
+
+.arrow--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 80px;
+  height: 100%;
+  border-color: black; }
+  .arrow--back:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 1em;
+    height: 1em;
+    border: 4px solid black;
+    border-color: inherit;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg); }
+
+.threesixty {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.threesixty .threesixty_images {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.threesixty .threesixty_images img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto; }
+
+.threesixty .threesixty_images img.previous-image {
+  visibility: hidden;
+  width: 0; }
+
+.threesixty .threesixty_images img.current-image {
+  visibility: visible;
+  width: 100%; }
+
+.threesixty .spinner {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px; }
+
+.threesixty .spinner span {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  display: block; }
+
+.threesixty .nav_bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 11; }
+
+.threesixty .nav_bar a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(../../assets/sprites.png.html) no-repeat;
+  text-indent: -99999px; }
+
+.threesixty .nav_bar a.nav_bar_play {
+  background-position: 0 0 !important; }
+
+.threesixty .nav_bar a.nav_bar_previous {
+  background-position: 0 -73px !important; }
+
+.threesixty .nav_bar a.nav_bar_stop {
+  background-position: 0 -37px !important; }
+
+.threesixty .nav_bar a.nav_bar_next {
+  background-position: 0 -104px !important; }
+
+/* html */
+.threesixty:-webkit-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px; }
+
+.threesixty:-moz-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px; }
+
+body {
+  font-family: 'NeuzeitSLT-Book', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  font-size: 14px; }
+
+body, html {
+  height: 100%; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.content-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/*# sourceMappingURL=space.css.map */

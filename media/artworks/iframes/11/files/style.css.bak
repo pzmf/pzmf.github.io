@@ -1,0 +1,851 @@
+	
+html {
+    margin:0px !important;
+    height: 100% !important;
+}
+
+body {
+    margin:0px !important;
+    height: 100% !important;
+    max-height: 100%;
+    overflow:hidden;
+	    animation:         masked-animationbg 120s linear infinite;
+        -moz-animation:    masked-animationbg 120s linear infinite;
+        -o-animation:      masked-animationbg 120s linear infinite;
+        -webkit-animation: masked-animationbg 120s linear infinite; 
+	
+	background: linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 50%,
+			rgba(0,0,0,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 50%,
+			rgba(0,0,0,1) 100%);
+        background: -o-linear-gradient(
+            -90deg, 
+           rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 50%,
+			rgba(0,0,0,1) 100%);
+        background: -webkit-linear-gradient(
+            -90deg,
+			rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 50%,
+			rgba(0,0,0,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1200px;
+
+}
+
+	@keyframes masked-animationbg {
+		100% {background-position: 0px -1200px;}
+    0% {background-position: 0px 0;}    
+    
+}
+
+@-webkit-keyframes masked-animationbg {
+	100% {background-position: 0px -1200px;}
+    0% {background-position: 0px 0;}    
+    
+}
+
+@-o-keyframes masked-animationbg {
+	100% {background-position: 0px -1200px;}
+    0% {background-position: 0px 0;}    
+    
+}
+
+@-moz-keyframes masked-animationbg {
+	100% {background-position: 0px -1200px;}
+    0% {background-position: 0px 0;}    
+    
+}
+
+#screenbg {
+    margin:0px !important;
+    height: 100% !important;
+	width:100% !important;
+    overflow:hidden;
+	background: url(https://neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/11/files/images/bg_point.gif) repeat;
+	z-index:0;
+	position: fixed !important;
+}
+
+#pixel1, #pixel1-2, #pixel1-3, #pixel1-4, #pixel1-5, #pixel1-6, #pixel1-7, #pixel1-8, #pixel1-9, #pixel1-10,.blink, .transparent, .transparent1, .blink2, #pixel-R, #pixel-G, #pixel-B, .blink1
+
+
+{
+    margin:0px !important;
+    padding:0px;
+    width:1px;
+    min-height: 100% !important;
+    float:left;
+    background:url(https://neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/11/files/images/r1.gif);
+    z-index:1;
+}
+
+#pixel1 {
+	animation:             masked-animation 19s linear infinite;
+        -moz-animation:    masked-animation 19s linear infinite;
+        -o-animation:      masked-animation 19s linear infinite;
+        -webkit-animation: masked-animation 19s linear infinite; 
+		background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 100px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+#pixel1-2 {
+	animation:             masked-animation 18s linear infinite;
+        -moz-animation:    masked-animation 18s linear infinite;
+        -o-animation:      masked-animation 18s linear infinite;
+        -webkit-animation: masked-animation 18s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 200px;
+	 
+	
+	
+	}
+	
+
+@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+#pixel1-3 {
+	animation:             masked-animation 17s linear infinite;
+        -moz-animation:    masked-animation 17s linear infinite;
+        -o-animation:      masked-animation 17s linear infinite;
+        -webkit-animation: masked-animation 17s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 400px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+#pixel1-4 {
+	animation:             masked-animation 16s linear infinite;
+        -moz-animation:    masked-animation 16s linear infinite;
+        -o-animation:      masked-animation 16s linear infinite;
+        -webkit-animation: masked-animation 16s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 500px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+#pixel1-5 {
+	animation:             masked-animation 15s linear infinite;
+        -moz-animation:    masked-animation 15s linear infinite;
+        -o-animation:      masked-animation 15s linear infinite;
+        -webkit-animation: masked-animation 15s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 800px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+#pixel1-6 {
+	animation:             masked-animation 14s linear infinite;
+        -moz-animation:    masked-animation 14s linear infinite;
+        -o-animation:      masked-animation 14s linear infinite;
+        -webkit-animation: masked-animation 14s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1000px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 500px;}
+}
+
+
+#pixel1-7 {
+	animation:             masked-animation 13s linear infinite;
+        -moz-animation:    masked-animation 13s linear infinite;
+        -o-animation:      masked-animation 13s linear infinite;
+        -webkit-animation: masked-animation 13s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1500px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+#pixel1-8 { 
+		animation:         masked-animation 12s linear infinite;
+        -moz-animation:    masked-animation 12s linear infinite;
+        -o-animation:      masked-animation 12s linear infinite;
+        -webkit-animation: masked-animation 12s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 2000px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 500px;}
+}
+
+
+
+#pixel1-9 { 
+		animation:         masked-animation 11s linear infinite;
+        -moz-animation:    masked-animation 11s linear infinite;
+        -o-animation:      masked-animation 11s linear infinite;
+        -webkit-animation: masked-animation 11s linear infinite; 
+		background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	 	 background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    	background-position: 0 0;
+   		background-repeat: repeat ;
+    	background-size: 100% 2500px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 500px;}
+}
+
+#pixel1-10 { animation:    masked-animation 10s linear infinite;
+        -moz-animation:    masked-animation 10s linear infinite;
+        -o-animation:      masked-animation 10s linear infinite;
+        -webkit-animation: masked-animation 10s linear infinite; background: linear-gradient(
+            -90deg, 
+                        rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+	  	background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(
+            -90deg,rgba(0,0,0,1) 0%,
+            rgba(255,255,255,1) 100%);
+    	background-position: 0 0;
+    	background-repeat: repeat ;
+     	background-size: 100% 3000px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 3000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 3000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 3000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 3000px;}
+}
+
+
+
+#pixel-R {
+	width:1px;
+	animation:             masked-animation 14s linear infinite;
+        -moz-animation:    masked-animation 14s linear infinite;
+        -o-animation:      masked-animation 14s linear infinite;
+        -webkit-animation: masked-animation 14s linear infinite; 
+		background: linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(255,0,0,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(255,0,0,1) 100%);
+        background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(255,0,0,1) 100%);
+        background: -webkit-linear-gradient(
+            -90deg,
+			rgba(0,0,0,0) 0%,
+			rgba(255,0,0,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1200px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 1200px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 1200px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 1200px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 1200px;}
+}
+
+
+
+
+#pixel-G {
+	width:1px;
+	animation:             masked-animation 12s linear infinite;
+        -moz-animation:    masked-animation 12s linear infinite;
+        -o-animation:      masked-animation 12s linear infinite;
+        -webkit-animation: masked-animation 12s linear infinite; 
+		background: linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,255,0,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,255,0,1) 100%);
+        background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,255,0,1) 100%);
+        background: -webkit-linear-gradient(
+            -90deg,
+			rgba(0,0,0,0) 0%,
+			rgba(0,255,0,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1000px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+#pixel-B {
+	width:1px;
+	    animation:         masked-animation 10s linear infinite;
+        -moz-animation:    masked-animation 10s linear infinite;
+        -o-animation:      masked-animation 10s linear infinite;
+        -webkit-animation: masked-animation 10s linear infinite; 
+		background: linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,0,255,1) 100%);
+	  background: -moz-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,0,255,1) 100%);
+        background: -o-linear-gradient(
+            -90deg, 
+            rgba(0,0,0,0) 0%,
+			rgba(0,0,255,1) 100%);
+        background: -webkit-linear-gradient(
+            -90deg,
+			rgba(0,0,0,0) 0%,
+			rgba(0,0,255,1) 100%);
+    background-position: 0 0;
+    background-repeat: repeat ;
+     background-size: 100% 1000px;
+	
+	
+	}
+	
+	@keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-webkit-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-o-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+@-moz-keyframes masked-animation {
+    0% {background-position: 0px 0;}    
+    100% {background-position: 0px 2000px;}
+}
+
+
+
+@keyframes blink {  
+    0% { background-color: white; }
+    100% { background-color: black; }
+}
+@-webkit-keyframes blink {
+    0% { background-color: white; }
+    100% { background-color: black; }
+}
+
+
+
+.blink1 {
+	width:1px;
+    -webkit-animation: blink 0.7s linear infinite;
+    -moz-animation: blink 0.7s linear infinite;
+    -ms-animation: blink 0.7s linear infinite;
+    -o-animation: blink 0.7s linear infinite;
+    animation: blink 0.7s linear infinite;
+} 
+
+
+
+.blink {
+	width:1px;
+    -webkit-animation: blink 0.2s linear infinite;
+    -moz-animation: blink 0.2s linear infinite;
+    -ms-animation: blink 0.2s linear infinite;
+    -o-animation: blink 0.2s linear infinite;
+    animation: blink 0.2s linear infinite;
+} 
+
+
+@keyframes blink2 {  
+    0% { background-color: white; }
+    100% { background-color: black; }
+}
+@-webkit-keyframes blink2 {
+    0% { background-color: white; }
+    100% { background-color: black; }
+}
+.blink2 {
+	width:2px;
+    -webkit-animation: blink 0.4s linear infinite;
+    -moz-animation: blink 0.4s linear infinite;
+    -ms-animation: blink 0.4s linear infinite;
+    -o-animation: blink 0.4s linear infinite;
+    animation: blink 0.4s linear infinite;
+} 
+
+
+.transparent {
+	width:2px;
+    background:none;
+} 
+
+.transparent1 {
+	width:1px;
+    background:none;
+} 
+
+#panel {
+    right:30px;
+    top:30px;
+    margin:0px;
+    background:none;
+	width:64px;
+    height:auto;
+    z-index:3;
+    border:0px outset #fff;
+    position:fixed;
+} 
+
+#radar {
+    background:url('https://neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/11/files/images/pad MBC.gif');
+    width:60px;
+    height:224px;
+	padding-top:0px;
+    border:2px solid #fff;
+} 
+
+#target, #target-2, #target-3, #target-4, #target-5, #target-6, #target-7, #target-8, #target-9, #target-10, #target-R, #target-G, #target-B, #target-N, #target-BLK
+
+{
+    background:none;
+    width:60px;
+    height:15px;
+    border-bottom:0px solid yellow;
+    float:left;
+} 
+
+
+
+#hand { 
+    cursor: move;
+    background:grey;
+    width:26px;
+    height:15px;
+	border-top:2px solid #fff;
+	border-right:2px solid #fff;
+	float:left;
+}
+
+
+.button {
+    width:15px;
+    height:15px;
+    background:grey;
+    cursor:pointer;
+	border-top:2px solid #fff;
+	border-right:2px solid #fff;
+	border-left:2px solid #fff;
+    float:left;   
+}
+
+
+.button-clicked {
+	width:10px;
+	height:10px;
+    background:#000;
+	border:1px solid #666;
+}
+
+
+#refresh {
+	right:0px;
+	float:left;
+    width:15px;
+    height:15px;
+    background:grey;
+    cursor:pointer;
+	border-top:2px solid #fff;
+	border-right:2px solid #fff;
+	
+	
+}
+  
+

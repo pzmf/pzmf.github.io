@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/21/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 16:58:22 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Club Rothko Builder</title>
+<style>
+
+body{
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	color:#FFF;
+	font-family:Helvetica, sans-serif;
+	font-size:13px;
+	text-align:center;
+	background: transparent;
+
+	/*cursor:none;*/
+}
+
+#overlay{
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	background-color:rgba(0,0,0,.5);
+	z-index:5;
+	-webkit-transition:opacity .5s ease-out;-moz-transition:opacity .5s ease-out;-o-transition:opacity .5s ease-out;
+}
+
+#center{
+	position:absolute;
+	height:100px;
+	width:600px;
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+	margin-left:-300px;
+	font-size:24px;
+}
+
+
+.button{
+	color:#FFF;
+	background-color:#000;
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+	width:60px;
+}
+
+#guiHolder div{
+	float:right;
+	margin-left:5px;
+	cursor:pointer;
+}
+
+
+#guiHolder{
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:20;
+}
+
+#nameHolder{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	text-align:right;
+	z-index:3;
+	font-size:12px;
+}
+
+#socialHolder{
+	position:absolute;
+	bottom:10px;
+	left:10px;
+	text-align:left;
+	z-index:20;
+	font-size:12px;
+}
+
+#bottom{
+	opacity:0;
+	pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+    <div id="container"></div>
+
+    <div id="guiHolder">
+
+    </div>
+
+     <div id="overlay">
+    	<div id="center">
+        	loading...
+		</div>
+    </div>
+    <span id="bottom">
+        <div id="nameHolder">
+
+        </div>
+
+        <div id="socialHolder">
+
+        </div>
+    </span>
+
+    <div id="gifHolder">
+
+    </div>
+
+    <div id="bgGifHolder">
+
+    </div>
+
+    <script src="Scripts/JS/Three.js"></script>
+		<script src="Scripts/JS/Detector.js"></script>
+    <script src="Scripts/JS/dat.gui.min.js"></script>
+    <script src="Scripts/JS/Distortion.js"></script>
+    <script src="Scripts/JS/Utils.js"></script>
+    <script src="Scripts/JS/GuiFunctions.js"></script>
+    <script src="Scripts/JS/Updates.js"></script>
+    <script src="Scripts/JS/CustomShader.js"></script>
+    <script src="Scripts/JS/libgifMod.js"></script>
+    <!--<script src="../../Scripts/JS/ExportOBJ.js"></script>-->
+
+    <script>
+        //window.open( renderer.domElement.toDataURL( 'image/png' ), '_blank' );
+
+		var isAnimating = false;
+		var initialized = false;
+
+        if ( ! Detector.webgl ){
+			document.getElementById("overlay").style.display="none";
+			Detector.addGetWebGLMessage();
+		}
+
+    var camera, scene, renderer;
+
+		var isBuild = false, canControl = true, isRemix = false;
+
+		var urlImg, bgUrlImg, video, videoTex, gifObject, bgGifObject, isGif = false, bgIsGif = false, gifHolder, bgGifHolder, nameHolder, socialHolder, containerClick = false;
+
+		var distortionGeo, distortionTexture, distortionCanvas, distortionMesh, distortionMat, distortionHolder, distortionCanvas, distortionCTX, loadingText, center, container;
+		var distortionObject;
+		var bgMesh, bgGeo, bgMat, bgTexture, cameraCopy, bgCanvas, bgCTX, bgZpos = -1500, bgSize = 5000;
+		var allLights=[], ambientLight, lightsHolder;
+		var mouseCont = false;
+
+		var mouseX = 0.0, mouseY = 0.0;
+		var windowHalfX = window.innerWidth / 2;
+		var windowHalfY = window.innerHeight / 2;
+		var cameraRad = 200.0;
+
+		var reflections=[];
+		var paths = ["Assets/Images/EnvironmentMaps/studio1/", "Assets/Images/EnvironmentMaps/studio2/index.html", "Assets/Images/EnvironmentMaps/ocean/index.html", "Assets/Images/EnvironmentMaps/mountain/index.html", "Assets/Images/EnvironmentMaps/desert/"];
+		var format = '.png';
+		var urls=[];
+		var gifOverlayOT = false, resetOverlay = true;
+
+		var geoPath = "Assets/3dObjects/index.html";
+		var phpPath = "";
+
+		// ARTWORK CONTENT
+
+		var dynObj =
+		{urlString:'u8ryp_2118647823.gif',bgUrlString:'u8ryp_2118647823.gif',distortionSpecColor:'0xffffff',distortionColor:'0xffffff',bgColor:'0xffffff',distortionAxis:'x',currentBGMesh:'sphere',currentDistortionGeo:'pyramid',distortionShading:'smooth',lightCol:'0xffffff',ambientLightCol:'0xffffff',fogCol:'0xf20000',artistName:'unknown',distortionTitle:'untitled',lightCol0:'0xff00b6',lightCol1:'0x0094ff',lightCol2:'0xff9900',lightCol3:'0x4cff00',lightCol4:'0xff006d',distortionTile:1.1,distortionReflectionOperation:1,distortionShininess:266.5157273388857,distortionReflectivity:0,distortionDistortionAmount:-1,distortionAnimate:false,distortionDoNormals:true,distortionHeight:1.4000000000000001,distortionWidth:0.08,distortionSpeed:0.034,distortionRandomMult:0,distortionPhase:8.551999999999985,distortionScl:50,distortionRotX:0,distortionRotY:0,distortionRotZ:0,bgOpacity:0.24,bgTile:1.1,las:0.09601358453950028,lightInt:10,lightAmt:4,fogIntensity:0.00020700250667097923,currentReflection:3,mili:'52e97ec261b16',isVideo:false,bgIsVideo:false}
+				;
+
+</script>
+<script src="Scripts/JS/Defaults.js"></script>
+<script>
+
+				init();
+				initURL();
+        animate();
+
+
+        function init() {
+
+						gifHolder =  document.getElementById( 'gifHolder' );
+            bgGifHolder =  document.getElementById( 'bgGifHolder' );
+
+            nameHolder =  document.getElementById( 'nameHolder' );
+            //nameHolder.innerHTML = dynObj.distortionTitle +" by "+dynObj.artistName;
+
+         	container = document.getElementById( 'container' );
+            container.onmousedown = function(){
+						if(canControl){
+							killGUIClick();
+						}
+					}
+
+            camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 5000 );
+            camera.position.set( 0, 0, 10 );
+
+            scene = new THREE.Scene();
+          	var fc = new THREE.Color(0xffffff);
+			fc.setHex(dynObj.fogCol);
+            scene.fog = new THREE.FogExp2( fc, dynObj.fogIntensity);
+
+
+            renderer = new THREE.WebGLRenderer({preserveDrawingBuffer:true});
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.autoClearColor = false;
+            container.appendChild(renderer.domElement);
+
+			for(var i = 0; i<paths.length; i++){
+				urls[i] = [
+					paths[i] + 'px' + format, paths[i] + 'nx' + format,
+					paths[i] + 'py' + format, paths[i] + 'ny' + format,
+					paths[i] + 'pz' + format, paths[i] + 'nz' + format
+				]
+
+				reflections[i] = THREE.ImageUtils.loadTextureCube( urls[i] );
+				reflections[i].format = THREE.RGBFormat;
+			}
+
+			var al = new THREE.Color(0xffffff);
+			al.setHex(dynObj.ambientLightCol);
+
+			ambientLight = new THREE.AmbientLight( al);
+			scene.add(ambientLight);
+
+			setLightAmount(5, false);
+
+			cameraCopy = new THREE.Object3D();
+			scene.add(cameraCopy);
+
+			bgCanvas = document.createElement('canvas');
+			bgCTX = bgCanvas.getContext('2d');
+
+			distortionCanvas = document.createElement('canvas');
+			distortionCTX = distortionCanvas.getContext('2d');
+
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+						document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+            document.addEventListener( 'mouseup', onDocumentMouseUp, false );
+            document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
+            document.addEventListener( 'DOMMouseScroll', onDocumentMouseWheel, false);
+            window.addEventListener( 'resize', onWindowResize, false );
+
+        }
+
+		function animate() {
+				requestAnimationFrame( animate );
+				render();
+		}
+
+		function initURL(){
+			if(!dynObj.isVideo){
+				setMainTexture(dynObj.urlString);
+			}else{
+				initWebCam("distortion")
+			}
+			if(!dynObj.bgIsVideo){
+            	setBGTexture(dynObj.bgUrlString);
+			}else{
+				initWebCam("bg")
+			}
+		}
+
+		function killOverlay(){
+
+			var buttonHolder = document.getElementById( 'guiHolder' );
+            var bottom = document.getElementById( 'bottom' );
+
+			buttonHolder.style.opacity = 1;
+			buttonHolder.style.pointerEvents = 'auto';
+
+            bottom.style.opacity = 1;
+			bottom.style.pointerEvents = 'auto';
+
+			var overlay = document.getElementById( 'overlay' );
+
+			overlay.style.opacity = 0;
+			overlay.style.pointerEvents = 'none';
+		}
+
+		function render() {
+
+			HandleLights();
+
+			HandleGif();
+
+			HandleDistortion();
+
+			OrbitCamera(cameraRad, 500, 0.00005);
+
+			renderer.render( scene, camera );
+		}
+
+		function proxify (url) {
+			return url;//"http://198.199.72.134/cors/" + url.replace(/^https?:\/\//, "");
+		};
+
+        function goToRemix(){
+			//window.open("build.php?var="+dynObj.mili, "_self");
+		}
+
+		function stopAnimation() {
+			isAnimating = false;
+		}
+
+		function startAnimation() {
+			if(!initialized)
+			{
+				init();
+				initURL();
+				initialized = true;
+			}
+
+			isAnimating = true;
+			animate();
+		}
+
+
+	</script>
+</body>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/21/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 16:58:33 GMT -->
+</html>

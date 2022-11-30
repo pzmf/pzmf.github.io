@@ -1,0 +1,183 @@
+<html>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/16/files/8.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:03:10 GMT -->
+<head>
+</head>
+<body>
+<style>
+	body{
+		background-color:#000;
+	}
+	</style>
+<script src="three.min.js"></script> 
+<script src="OrbitControls.js"></script> 
+<script src = "Detector.js"></script> 
+<script src = "CanvasRenderer.js"></script> 
+<script src = "fastBlur.js"></script>
+<div id="ThreeJS" style="position: absolute; left:0px; top:0px"></div>
+<script>
+	var scene, camera, renderer, controls, mesh;
+    var angularSpeed = 0.1; 
+    var lastTime = 0;
+	
+	var counter = 0;
+	clearBG = true;
+	
+	init();
+	animate();
+	
+	function init(){
+	
+	scene = new THREE.Scene();	
+	
+	//camera
+	camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight, 1, 10000);
+	camera.position.z = -150;
+	scene.add(camera);
+	
+	//renderer
+	if(Detector.webgl){
+	if(clearBG == false){
+	renderer  = new THREE.WebGLRenderer();
+	}
+	else{
+	renderer  = new THREE.WebGLRenderer({preserveDrawingBuffer:true});
+	renderer.autoClearColor = false;
+	}
+}
+else{
+	renderer = new THREE.CanvasRenderer();
+}
+	renderer.setSize(window.innerWidth,window.innerHeight);
+	container = document.getElementById('ThreeJS');
+	container.appendChild( renderer.domElement);
+	
+	//controls
+	controls = new THREE.OrbitControls( camera );
+	
+	//start canvas stuff
+	var canvas = document.createElement('canvas');
+	canvas.width = 200;
+	canvas.height = 200;
+	var ctx = canvas.getContext('2d');
+	
+	var texture = new THREE.Texture(canvas);
+	
+	var img = new Image();
+	img.src = "8.png";
+	img.onload = function()
+	{
+		ctx.drawImage(img, 0,0, canvas.width, canvas.height);
+	
+		var input = ctx.getImageData(0,0, canvas.width, canvas.height);
+		var inputData = input.data;
+		
+		var w = canvas.width, h= canvas.height;
+		
+		ctx.putImageData(input,0,0);
+	
+		function copyLoop(){
+			var copy = ctx.getImageData(0,0,canvas.width, canvas.height);
+			var copyData = copy.data;
+			
+			for(var y = 0; y<h; y++){
+				for(var x = 0; x<w; x++){
+					
+					var pixel = (y*w+x)*4;
+		
+					var red = pixel;
+					var green = pixel+1;
+					var blue = pixel+2;
+					var alpha = pixel+3;
+					
+					if(copyData[blue+4]<copyData[blue]){		
+		            	swap(copyData, red, red-4, green, green-4, blue, blue-4, alpha, alpha-4*w);
+					}				
+				}
+			}
+			
+			ctx.putImageData(copy,0,0);
+			if(texture)texture.needsUpdate = true;
+			texture.magFilter = THREE.NearestFilter;
+			
+			if(counter%1500 == 0){
+				ctx.drawImage(img, 0,0, canvas.width, canvas.height);
+			}
+			counter++;
+		}
+		setInterval(function(){copyLoop();}, 30);
+	};
+	material = new THREE.MeshBasicMaterial({map:texture, side:THREE.DoubleSide, depthTest:true});
+	material.transparent = true;
+
+	group = new THREE.Object3D();
+	
+	for(var i = -140; i<140; i+=70){
+		for(var j = -140; j<140; j+=70){
+			for(var k = -140; k<140; k+=70){
+
+		mesh = new THREE.Mesh(
+				new THREE.CubeGeometry(50,50,50),
+				material
+		);
+		mesh.position.set(i,j,k);
+		group.rotation.x = 90;
+		group.add(mesh);
+			}
+		}
+	}
+	scene.add(group);
+}
+	
+function animate(){
+			var time = (new Date()).getTime();
+	        var timeDiff = time - lastTime;
+	        var angleChange = angularSpeed * timeDiff * 2 * Math.PI / 10000;
+	        group.rotation.x -= angleChange/2;
+			group.rotation.z += angleChange/2;
+			group.rotation.y += angleChange/2;			
+	        lastTime = time;
+
+	requestAnimationFrame( animate);
+	
+	render();
+	update();
+}
+
+function update(){	
+	controls.update();
+}
+function render(){
+	renderer.render(scene, camera);
+}
+
+//simple swap
+function swap( x, rl, rr, gl, gr, bl, br, al, ar){
+    var tempr = x[rl];
+    x[rl] = x[rr];
+    x[rr] = tempr;
+	
+	var tempg = x[gl];
+    x[gl] = x[gr];
+    x[gr] = tempg;
+	
+	var tempb = x[bl];
+    x[bl] = x[br];
+    x[br] = tempb;
+	
+	var tempa = x[al];
+    x[al] = x[ar];
+    x[ar] = tempa;
+}
+
+function clear(){
+	renderer.clear();
+}
+
+document.addEventListener('mousedown' , clear, false);
+
+	</script>
+</body>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/16/files/8.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:03:16 GMT -->
+</html>

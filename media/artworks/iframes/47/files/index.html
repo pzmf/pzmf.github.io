@@ -1,0 +1,74 @@
+<html>
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/47/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:39 GMT -->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>"I Feel Like Shutting Down" by Graeme Rutherford, 2014</title>
+	<!-- Javascript by Jamie White jamie-white.com -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="../../../../../code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"></script>
+
+<style>
+	html, body { margin:0; padding:0; background: #000000; }
+	.wrapper { margin:0; padding:0; }
+	.bar { position:relative; width:100%; height:10em; background-color: #ff0000; }
+</style>
+
+<script>
+
+var barHTML = "<div class='bar'></div>";
+
+$(function(){
+	function randomColor(){
+		return Math.ceil(Math.random()*255);
+	}
+
+	function newBar() {
+		var nextBar = $(barHTML);
+		var col = randomColor();
+		nextBar.css({width:"0%", backgroundColor:"rgb("+col+","+col+","+col+")"});
+		$(".wrapper").append(nextBar);
+		TweenMax.to(nextBar, 2, {width:100+"%", onComplete:newBar, ease:Linear.easeNone});
+
+		$(document).scrollTop($(document).height());
+	}
+
+	newBar();
+});
+
+
+</script>
+
+</head>
+
+<!--
+
+GGGGGGGGGGGG
+GGGGGGGGGGGG
+GGG
+GGG
+GGG   GGGGGG
+GGG   GGGGGG
+GGG      GGG
+GGG      GGG
+GGGGGGGGGGGG GGG
+GGGGGGGGGGGG GGG
+
+
+-->
+
+<body>
+	<div class="wrapper"></div>
+
+
+
+</body>
+
+
+<!-- Mirrored from neverlandspace.sos-ch-dk-2.exo.io/artworks/iframes/47/files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 17:10:39 GMT -->
+</html>
