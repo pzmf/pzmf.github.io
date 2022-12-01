@@ -54,7 +54,7 @@
       <link href="build/css/style-f3e6f85c.css" rel="stylesheet">
 
 
-<script defer data-domain="pzmf.github.io" src="js/script.js"></script></head>
+<script defer data-domain="pzmf.github.io" src="/js/script.js"></script></head>
 <body>
     <div class="mobile-alert">
         <span class="alert__text">Neverland Space is best experienced on a desktop computer.</span>
@@ -72,7 +72,7 @@
 </nav>
 
     <div class="lead-wrap">
-      <a class='lead-wrap__logolink' href='/'><img class="lead-wrap__logo" src="ns-logo.svg"></a>
+      <a class='lead-wrap__logolink' href='/'><img class="lead-wrap__logo" src="https://pzmf.github.io/ns-logo.svg"></a>
       <p>
         Neverland Space presents online exhibitions featuring digital art that has never been shown before. Together with the artists we create unique and frequently changing experiences. The time has come for digital art to shine.
       </p>
@@ -228,11 +228,11 @@
 
 
 	<!-- Scripts -->
-	<script src="js/jquery.min.js"></script>
+	<script src="https://pzmf.github.io/js/jquery.min.js"></script>
 
 
-      <script type="text/javascript" src="js/jquery.transit.min.js"></script>
-  <script src="build/js/site-b70d995d.js"></script>
+      <script type="text/javascript" src="https://pzmf.github.io/js/jquery.transit.min.js"></script>
+  <script src="https://pzmf.github.io/build/js/site-b70d995d.js"></script>
 
 </body>
 </html>
