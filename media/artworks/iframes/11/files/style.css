@@ -69,7 +69,7 @@ body {
     height: 100% !important;
 	width:100% !important;
     overflow:hidden;
-	background: url(https://pzmf.github.io/media/artworks/iframes/11/files/images/bg_point.gif) repeat;
+	background: url(images/bg_point.gif) repeat;
 	z-index:0;
 	position: fixed !important;
 }
@@ -83,7 +83,7 @@ body {
     width:1px;
     min-height: 100% !important;
     float:left;
-    background:url(https://pzmf.github.io/media/artworks/iframes/11/files/images/r1.gif);
+    background:url(images/r1.gif);
     z-index:1;
 }
 
@@ -785,7 +785,7 @@ body {
 } 
 
 #radar {
-    background:url('https://pzmf.github.io/media/artworks/iframes/11/files/images/pad_MBC.gif');
+    background:url('images/pad%20MBC.gif');
     width:60px;
     height:224px;
 	padding-top:0px;
