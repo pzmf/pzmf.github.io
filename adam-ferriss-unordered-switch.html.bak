@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+　　　∧∧
+　　(・ω・)
+　　　 // ）
+／￣￣《￣￣＼
+|　・　Ｕ　　 |
+| |ι　　　　　  |つ
+Ｕ｜｜￣￣｜｜
+　 ￣　　　￣
+ NEVERLAND SPACE BY 12AM.COM
+-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=no">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@muslimvogue">
+    <meta name="twitter:creator" content="@muslimvogue">
+
+    <!-- Open Graph data -->
+    <meta property="og:url" content="https://pzmf.github.io/adam-ferriss-unordered-switch" />
+    <meta property="og:site_name" content="Muslim Vogue" />
+
+    <title>Unordered Switch by Adam Ferriss on Neverland Space</title>
+    <meta name="twitter:title" content="Unordered Switch by Adam Ferriss on Neverland Space">
+    <meta property="og:title" content="Unordered Switch by Adam Ferriss on Neverland Space" />
+
+    <meta name="description" content="Algorithms are small procedures, consisting of formulas. Their goal is to solve problems. In current times the term gained popularity through Google and..." />
+    <meta name="twitter:description" content="Algorithms are small procedures, consisting of formulas. Their goal is to solve problems. In current times the term gained popularity through Google and...">
+    <meta property="og:description" content="Algorithms are small procedures, consisting of formulas. Their goal is to solve problems. In current times the term gained popularity through Google and..." />
+
+    <meta name="twitter:image" content="https://pzmf.github.io/media/exhibitions/5/image/original/unordered-switch-preview.jpg">
+    <meta property="og:image" content="https://pzmf.github.io/media/exhibitions/5/image/original/unordered-switch-preview.jpg" />
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+        <link href="build/css/space-5a2f6295.css" rel="stylesheet">
+
+
+<script defer data-domain="pzmf.github.io" src="/js/script.js"></script></head>
+<body>
+    <div class="mobile-alert">
+        <span class="alert__text">Neverland Space is best experienced on a desktop computer.</span>
+        <a href="#" class="alert__link js-hideMobileAlert">Proceed anyway</a>
+    </div>
+
+
+  <div class="content-wrap">
+    <div class="loader"></div>
+  </div>
+
+
+	<!-- Scripts -->
+	<script src="https://pzmf.github.io/js/jquery.min.js"></script>
+
+    <script>window.exhibition = {"title":"Unordered Switch","artist":"Adam Ferriss","description":"Algorithms are small procedures, consisting of formulas. Their goal is to solve problems. In current times the term gained popularity through Google and other services using algorithms to predict things users might interest. Adam Ferriss makes use of this technology to create images. An algorithm determines that one pixel is bigger than it's neighbor, it will \"swap\" them and they will continue trading places in this way until they are all correctly sorted. The outcome of the artwork is depending on the different parameters the artists applies to the application. For 'Unordered Switch' Ferriss created an algorithm that makes illogical changes of the imagery exchanging not only colors but also opacity (alpha channels). The texture is then mapped onto 3d geometric compositions to echo the original pixel forms.","url":"http:\/\/ns02.test\/adam-ferriss-unordered-switch","preview":"https:\/\/https://pzmf.github.io\/media\/exhibitions\/5\/image\/original\/unordered-switch-preview.jpg","space":{"type":"default","backgroundColor":"#FFFFFF","foregroundColor":"#000000","birdseye":{"position":[2000,500,2000],"rotation":[0,0,0]}},"tags":[],"artworks":[{"id":0,"arrows":{"left":-1,"right":1},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/1\/files\/1.html","size":[2560,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/1\/poster\/original\/Screenshot-2015-05-11-17.15.56.png","position":[1001,0,-2560],"rotation":[0,50,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":1,"arrows":{"left":0,"right":2},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/2\/files\/2.html","size":[2560,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/2\/poster\/original\/Screenshot-2015-05-11-17.18.00.png","position":[4000,0,-2000],"rotation":[0,50,0],"instruction":null,"backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":2,"arrows":{"left":1,"right":3},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/3\/files\/3.html","size":[2560,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/3\/poster\/original\/Screenshot-2015-05-11-17.19.05.png","position":[7000,0,-2000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":3,"arrows":{"left":2,"right":4},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/12\/files\/4.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/12\/poster\/original\/Screenshot-2015-05-11-17.29.50.png","position":[2000,3000,-2000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#ffffff","foregroundColor":"#000000","viewport":"cover","fittoscreen":1},{"id":4,"arrows":{"left":3,"right":5},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/13\/files\/5.html","size":[2000,null],"adjust_ratio":1,"interactive":0,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/13\/poster\/original\/Screenshot-2015-05-11-17.31.13.png","position":[10000,0,1000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":5,"arrows":{"left":4,"right":6},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/14\/files\/6.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/14\/poster\/original\/Screenshot-2015-05-11-17.32.03.png","position":[7000,0,4000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#FFFFFF","foregroundColor":"#000000","viewport":"cover","fittoscreen":1},{"id":6,"arrows":{"left":5,"right":7},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/15\/files\/7.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/15\/poster\/original\/Screenshot-2015-05-11-17.34.18.png","position":[4000,0,7000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":7,"arrows":{"left":6,"right":8},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/16\/files\/8.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/16\/poster\/original\/Screenshot-2015-05-11-17.38.01.png","position":[1000,0,10000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":8,"arrows":{"left":7,"right":9},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/17\/files\/9.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/17\/poster\/original\/Screenshot-2015-05-11-17.38.43.png","position":[1000,0,-6000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#000000","foregroundColor":"#ffffff","viewport":"cover","fittoscreen":1},{"id":9,"arrows":{"left":8,"right":10},"name":"","type":"iframe","url":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/18\/files\/10.html","size":[2000,null],"adjust_ratio":1,"interactive":1,"image":"https:\/\/https://pzmf.github.io\/media\/artworks\/iframes\/18\/poster\/original\/Screenshot-2015-05-11-17.39.29.png","position":[0,0,-10000],"rotation":[0,0,0],"instruction":"","backgroundColor":"#FFFFFF","foregroundColor":"#000000","viewport":"cover","fittoscreen":1}],"endslide_arrow":9};window.suggestions = [{"url":"http:\/\/ns02.test\/rachael-archibald-control","image":"https:\/\/https://pzmf.github.io\/media\/exhibitions\/17\/image\/original\/control-preview.jpg","title":"Control","artist":"Rachael Archibald"},{"url":"http:\/\/ns02.test\/vince-mckelvie-la-turbo-avedon-the-club-rothko-selection-part-1","image":"https:\/\/https://pzmf.github.io\/media\/exhibitions\/11\/image\/original\/club-rothko-1-preview.jpg","title":"The Club Rothko Selection Part 1","artist":"Vince Mckelvie & La Turbo Avedon "},{"url":"http:\/\/ns02.test\/ofluxo-datamine-conflux","image":"https:\/\/https://pzmf.github.io\/media\/exhibitions\/13\/image\/original\/datamine-conflux-preview.jpg","title":"Datamine Conflux","artist":"Ofluxo"}];</script>
+        <script type="text/javascript" src="https://pzmf.github.io\/js\/three.min.js"></script>
+    <script src="build/js/space/default-d057d5a5.js"></script>
+
+</body>
+</html>
